@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Saurabh</title>
+    <link rel="shortcut icon" href="a.jpg" type="image/jpg">
+  <!-- Meta Information Starts-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- makes page responsive -->
+    <!-- Meta Information Ends -->
+    
+    <!-- Bootstrap and Jquery links Start -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap and Jquery links Ends -->
+  
+  <!-- CSS style sheet starts-->
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-image: url('aa3.gif');
+	  background-size: 1350px 650px;
+      color: #fff;
+      padding: 100px 25px;
+	  margin-bottom: 0px;
+	  width: 100%;
+      font-family: Montserrat, sans-serif;
+  }
+  .hover_h:hover{
+  transform:perspective(6rem) rotate3d(-4.36, 1.25, 0, 1deg);
+  transform: perspective(6rem) rotate3d(-0.94, 1.17, 0, 1deg);
+  }
+  
+  .container-fluid {
+      padding: 60px 50px;
+  }
+    .container-fluid1 {
+      padding: 60px 50px;
+	  background-image: url("aa1.jpg");
+	  background-attachment: fixed;
+  }
+  .container-fluid2 {
+      padding: 60px 50px;
+	  background-image: url("bus.jpg");
+	      background-repeat: no-repeat;
+	  background-attachment: fixed;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: cyan;
+      font-size: 40px;
+  }
+    .logo-big {
+      color: #961f63;
+      font-size: 150px;
+  }
+  .logo {
+      color: #FFD700;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #961f63;
+  }
+  .carousel-indicators li {
+      border-color: #961f63;
+  }
+  .carousel-indicators li.active {
+      background-color: #961f63;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .portrait {
+    height: 235px;
+    width: 214px;
+}
+  .item span {
+      font-style: normal;
+	  color:green;
+  }
+  .panel {
+      border: 1px solid #961f63; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #961f63;
+      background-color: #fff !important;
+      color: #961f63;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #961f63 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #961f63;
+      color: #fff;
+  }
+
+
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #961f63;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+      .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #00ffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .parallax {
+    /* The image used */
+    background-image: url("image.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .parallax2 {
+    /* The image used */
+    background-image: url("fnd.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: cyan;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-left: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+    display: block;
+    transition: 0.3s;
+	font-family:Bradley Hand ITC;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.header-bar {
+    width: 60px;
+	height: 670px;
+	z-index: 99;
+	background-color: silver;
+	position:fixed;
+	display: flex;
+}
+hi1
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 10%;
+}
+
+.content 	{position: fixed;color: #f1f1f1;width: 100%;padding: 20px;}
+.hi			{vertical-align: middle;}
+#about 		{margin-left: 60px;}
+.bg-grey 	{margin-left: 60px;}
+#frnd 		{margin-left: 60px;}
+#map 		{margin-left: 60px;}
+@font-face 	{font-family:Againts;src: url(againts.otf);}
+h1			{color:cyan;}
+font		{font-family:Againts;font-size:125px;color:cyan;}
+font1		{font-family:Againts;font-size:90px;color:gold;}
+p			{font-family:Bradley Hand ITC;font-size:30px;color:#00CCCC;}
+p2			{font-family:Bradley Hand ITC;font-size:30px;color:Gold;}
+p1			{font-family:Bradley Hand ITC;font-size:50px;font-weight: bold;color:green;}
+f2			{color:gold;}
+u			{display:inline-block;vertical-align:middle}
+a.ex2:hover, a.ex2:active {font-size: 200%;text-decoration: line-through;}
+  </style>
+   <!-- CSS style sheet ends-->
+   
+  <!-- The PreLoader-->  
+	<style type="text/css">
+	.back-link a {
+		color: #4ca340;
+		text-decoration: none; 
+		border-bottom: 1px #4ca340 solid;
+	}
+	.back-link a:hover,
+	.back-link a:focus {
+		color: #408536; 
+		text-decoration: none;
+		border-bottom: 1px #408536 solid;
+	}
+	.entry-header {
+		text-align: left;
+		margin: 0 auto 50px auto;
+		width: 80%;
+        max-width: 978px;
+		position: relative;
+		z-index: 10001;
+	}
+	
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #e74c3c;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #f9c922;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #222222;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+
+	</style>
+	
+  <!-- The PreLoader Ends-->  
+	
+	
+	
+	
+</head>
+<body id="myPage" data-offset="60" bgcolor="cyan">
+
+  <!-- The PreLoader-->  
+
+<div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+		</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+	<script>$(document).ready(function() {
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+		$('h1').css('color','cyan');
+	}, 1000);
+	
+});</script>
+	  <!-- The PreLoader Ends-->  
+
+	
+	
+<!-- Navbar Starts -->
+
+<div id="mySidenav" class="sidenav">
+	<span onclick="closeNav()"><a href="#home" class="ex2">HOME</a></span>
+	<span onclick="closeNav()"><a href="#about" class="ex2">ABOUT</a></span>
+	<span onclick="closeNav()"><a href="#friends" class="ex2">FRIENDS</a></span>
+	<span onclick="closeNav()"><a href="#contact" class="ex2">CONTACT ME</a></span>
+	<span onclick="closeNav()"><a href="#college" class="ex2">MY COLLEGE</a></span>
+	</div>
+</div>
+<div id="1" class="header-bar">
+<div>
+<span class="hi" style="font-size:30px;"> <a href="#home"><img height="65px" width="60px" src="A.jpg"/></a></span>
+</div>
+
+<div>
+<span class="hi" style="font-size:30px;cursor:pointer;" onclick="openNav()" id="hi1">&#x22D9;</span>
+<span style="font-size:30px;cursor:pointer;display:none;" onclick="closeNav()" id="hi">&#x22D8;</span>
+</div>
+</div>
+<!-- navbar ends-->
+
+<div id="home" class="jumbotron text-center">
+<!--<video autoplay muted loop id="myVideo">
+  <source src="aa2.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>-->
+<div class="hover_h">
+  <font>Hello!&nbspI'M&nbsp&nbsp Saurabh
+  <h1 text="cyan">I am a &nbspProgrammer&nbsp& &nbspA &nbspWeb Designer&nbsp& &nbspI&nbsplike to code </h1>
+  </font>
+    </div><br><br><br>
+  <a href="#about" class="btn btn-default btn-lg"><span>Check Out My Portfolio</span></a>
+
+  </div>
+  <div class="parallax"></div>
+<!-- content starts-->
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-10">
+      <p1>Who Am I ???</p1><br>
+      <p>I am Saurabh & I'am 18 year old.<br>
+	  Right now I'am pursuing for S.Y.B.Sc.IT course.<br>I like to help Everyone... Specially If it's about computer.<br>Because,I keep learning new things new techniques related to computer.<br>
+	  As it has now become my passion to do so. </p>
+	    <button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#demo">Get In Touch</button>
+  <div id="demo" class="collapse">
+    <h2><a href="https://www.instagram.com/saurabhkawli_2215/"><i class="fa fa-instagram"></i>&nbsp&nbspFollow Me On Instagram</a></h2>
+  </div>
+    </div>
+    <div class="col-sm-2">
+  <img class="img-responsive center-block img-rounded" height="450" width="450" src="s1.jpg" />
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-2">
+	<span class="fa fa-steam-square logo"/> 
+	<button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#demo2">Are You A Gamer Too</button>
+  <div id="demo2" class="collapse">
+    <h2><a href="http://steamcommunity.com/profiles/76561198798744868/"><i class="fa fa-steam"></i>&nbspAdd Me On Steam</a></h2>
+  </div>
+	</div>
+    <div class="col-sm-10">
+      <p1>My Hobbies</p1><br>
+      <p>I am A Gamer.I like to Play lots of Games Assassins Creed is my Favourite Game.Other than gaming I like debugging codes.I like to play Cricket,Football,Volleyball.When I'am in village I never miss a single opportunity for swimming & Spending time with Friends.<br>And Yes Study Sorry But That's Not My Hobby!!!!</p>
+    </div>
+  </div>
+</div>
+  <div id="friends" class="parallax2"></div>
+<div class="container-fluid" id="frnd">
+
+  <div class="row">
+    <div class="col-sm-8">
+      <p1>Friends</p1><br>
+      <p>Friendship is the hardest thing in the world to explain. It's not something you learn in school. But if you haven't learned the meaning of friendship, you really haven't learned anything.A friend is one that knows you as you are, understands where you have been, accepts what you have become, and still, gently allows you to grow</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-bell logo"></span>
+    </div>
+  </div>
+</div>
+<div class="container-fluid1 bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+  <img class="img-responsive center-block img-rounded" height="450" width="450" src="frnd.jpg" />
+    </div>
+    <div class="col-sm-8">
+      <p1>Value Of Friendship</p1><br>
+      <p2>The value of friendship is something that few people take time to really appreciate. When you need a friend, you realize just how important it is to have a strong relationship to another person.  value of friendship, good friends Everyone values friendships, but it's especially important when you are a teenager and a young adult. A special friendship provides someone to talk to and hang out with, laughter, advice and so much more. </p2>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>My Friends</h2><br>
+  <h4>Some Of My Special Friends who made my life even crazier.</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="smit.jpg" alt="Smit" width="400" height="300">
+        <p><strong>Smit</strong></p>
+        <p>A good friend is like a four-leaf clover;<br>Hard to find and lucky to have.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="bro.jpg" alt="Sanchit" width="400" height="300">
+        <p><strong>Sanchit</strong></p>
+        <p>I am Glad Friends Don't Come With Price tags.I could have never Afford this Wonderful Master Piece I have got as My Friend
+		</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://www.w3schools.com/bootstrap/sanfran.jpg" alt="Jidhnesh" width="400" height="300">
+        <p><strong>Jidhnesh</strong></p>
+        <p>Because Of You,I Laugh A Little Harder,Cry A Little Less,And Smile A Lot More.</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What My Friends Say About Me</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"The Greatest Gift Of Life is Friendship, And I have Recived it."<br><span>Smit</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>Sanchit</span></h4>
+      </div>
+      <div class="item">
+        <h4>"I Couldn't BE more happy without this friend?"<br><span>Jidhnesh</span></h4>
+      </div>
+    </div>
+	    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <font1>
+  What Can I Do For You
+  </font1>
+  <br><br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="fa fa-keyboard-o logo-big"></span>
+      <h4>Coding</h4>
+      <p>I can write code for you</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="fa fa-wordpress logo-big"></span>
+      <h4>WordPress</h4>
+      <p>Design Your Website</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="fa fa-user-secret logo-big"></span>
+      <h4>Hacking</h4>
+      <p>Some Computer Hacks!!!</p>
+    </div>
+  </div>
+  </div>
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid2 bg-grey">
+  <div class="text-center"><font1>Let's Talk !</font1></div>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-5">
+	<f2>
+      <p2>Contact me at!!!</p2><br>
+      <p2><span class="glyphicon glyphicon-map-marker"></span>Mumbai,Maharashtra,India</p2><br>
+      <p2><span class="glyphicon glyphicon-phone"></span> +91 8879822150</p2><br>
+      <p2><span class="glyphicon glyphicon-envelope"></span> saurabhkawli08@gmail.com</p2>
+	  </f2>
+    </div>
+    <div class="col-sm-7 slideanim">
+     <!-- Form Starts -->
+     <script type="text/javascript">var submitted=false;</script>
+          <iframe name="hidden_iframe" id="hidden_iframe"
+style="display:none;" onload="if(submitted)
+{window.location='http://sites.lithan.com/contactupdate/thankyou.html';}"></iframe>
+
+     <form action="https://docs.google.com/forms/d/e/1FAIpQLSd9t3L8RCw-WffteV4jJcEgXqKNSHZHcbuXYXlqtILqWIS95w/formResponse"  method="post" target="hidden_iframe" onSubmit="submitted=true;" >
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="entry_1736593540" name="entry.1736593540" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="entry_1606578427" name="entry.1606578427" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="entry_1978245971" name="entry.1978245971"  placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+		</form>
+      <!-- Form Ends -->
+      
+    </div>
+  </div>
+</div>
+     <!-- College -->
+<div  id="college" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-8">
+      <p1>&nbsp&nbspMy College</p1><br>
+			<p>This Is My College I have been Here since My childhood from Jr.kg till now .I like my college very much.</p>
+	        <p><span class="glyphicon glyphicon-map-marker"></span>Mumbai,Dahisar</p>
+    </div>
+    <div class="col-sm-2">
+      <span class="fa fa-building-o logo"></span>
+    </div>
+  </div>
+  	    <button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#demo1">Take A tour</button>
+  <div id="demo1" class="collapse">
+    <h3><a href="http://shailendradegreecollege.in"><i class="fa fa-building-o"></i>&nbsp&nbspVisit My College</a></h3>
+  </div>
+</div>
+<!-- Add Google Maps -->
+<div id="map"><iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVVWVneaw5zsRZ0Y1pyYE6QE&key=AIzaSyDyX0RqVgDvBiekN5_Ypogst6I-uG9HIjQ" allowfullscreen></iframe></div>
+<!-- content ends-->
+ <!-- College Ends-->
+<!-- footer starts-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>About Me</p>
+  <a href="https://www.instagram.com/saurabhkawli_2215/"><i class="fa fa-instagram logo-small"></i></a>&nbsp&nbsp
+  <a href="https://twitter.com/SaurabhKawli"><i class="fa fa-twitter logo-small"></i></a>&nbsp&nbsp
+  <a href="https://www.facebook.com/"><i class="fa fa-facebook-official logo-small"></i></a>&nbsp&nbsp
+  <a href=""><i class="fa fa-whatsapp logo-small"></i></a>&nbsp&nbsp
+  <a href="https://in.pinterest.com/saurabhkawli/"><i class="fa fa-pinterest logo-small"></i>&nbsp&nbsp</a>
+  <a href="https://www.linkedin.com/in/saurabh-kawli-25270a157/"><i class="fa fa-linkedin logo-small"></i></a>
+</footer>
+
+<!-- footer ends-->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("hi").style.display = "block";
+    document.getElementById("hi1").style.display = "none";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("hi").style.display = "none";
+    document.getElementById("hi1").style.display = "block";
+
+}
+</script>
+</body>
+</html>
